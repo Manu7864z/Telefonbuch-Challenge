@@ -2,6 +2,116 @@
   text-align: center;
 }
 
-.App-header {
+* {
+  box-sizing: border-box;
+}
+
+body {
   background-color: #282c34;
+  color: white;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Cards {
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 5px;
+  width: 40vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background: #282c34;
+  -webkit-box-shadow: 11px 11px 14px #17191e, -11px -11px 14px #393f4a;
+  box-shadow: 11px 11px 14px #17191e, -11px -11px 14px #393f4a;
+  position: relative;
+}
+
+.Card-Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 10vh 0 0 0;
+  padding: 0;
+}
+
+.Card-Container a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .Card-Container {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Cards {
+    width: 80vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#Search-text {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  outline: none;
+  position: absolute;
+  top: 20vh;
+  left: 0;
+}
+
+#No-Results {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  position: absolute;
+  top: 30vh;
+  left: 50vh;
+  transform: translate(50%, 0);
+}
+
+#phone-number {
+  color: white;
+  font-size: 1rem;
+
+  transition: 0.3s ease-in-out;
+}
+
+#phone-number:hover {
+  transform: scale(1.03);
+}
+
+#Search-bar {
+  height: 10vh;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  outline: none;
+  margin: 0 10vh 0 0;
+  padding: 0;
+  border-bottom: 1px solid white;
 }
