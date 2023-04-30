@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Phonebook</h1>
+        <h1 id="heading">Phonebook</h1>
         <input
           type="text"
           id="Search-bar"
@@ -51,14 +51,14 @@ function App() {
           Reset
         </Button>
       </header>
-      <h2>Contacts</h2>
-
-      <section className="Card-Container">
+      <div className="texts">
         {searchQuery && (
           <p id="Search-text">Search results for "{searchQuery}"</p>
         )}
         {sortedData.length === 0 && <p id="No-Results">No results found</p>}
+      </div>
 
+      <section className="Card-Container">
         {sortedData.map((phone) => (
           <div key={phone.phone} className="Cards">
             <p>Name: {phone.name}</p>
