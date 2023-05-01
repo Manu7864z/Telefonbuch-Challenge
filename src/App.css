@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-image: url(/Users/manu7864/Desktop/Developement/my-app/public/waves.svg);
+  background-image: url(/public/waves.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
