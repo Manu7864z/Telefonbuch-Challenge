@@ -77,7 +77,7 @@ body {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .App {
     text-align: center;
     display: flex;
@@ -153,7 +153,7 @@ body {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 368px) {
   .App {
     text-align: center;
     display: flex;
