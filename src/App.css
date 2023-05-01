@@ -19,6 +19,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background-image: url(/Users/manu7864/Desktop/Developement/my-app/public/waves.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .Cards {
@@ -27,14 +31,13 @@ body {
   padding: 10px;
   margin: 5px;
   width: 40vw;
-  height: fit-content;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   -webkit-border-radius: 15px;
   border-radius: 15px;
   background: #282c34;
-  -webkit-box-shadow: 11px 11px 14px #17191e, -11px -11px 14px #393f4a;
-  box-shadow: 11px 11px 14px #17191e, -11px -11px 14px #393f4a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: relative;
 }
 
@@ -45,7 +48,11 @@ body {
   justify-content: center;
   align-items: center;
   margin: 10vh 0 0 0;
-  padding: 0;
+  padding: 1vh 1vh 5vh 1vh;
+  width: 90vw;
+  height: 65vh;
+  position: relative;
+  overflow: scroll;
 }
 
 .Card-Container a {
@@ -65,21 +72,155 @@ body {
     height: fit-content;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .Card-Container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 60vh;
+  }
+
+  .Cards {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #phone-number {
+    font-size: 0.8rem;
+  }
+
+  #phone-number:hover {
+    transform: scale(1.03);
+  }
+
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  .App-header {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    gap: 10px;
+  }
+
+  #Search-text {
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  #No-Results {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: absolute;
+    top: 30vh;
+  }
+
+  .texts {
+    font-size: 0.8rem;
+    position: relative;
+    top: 20vh;
+    left: -15vw;
+  }
+}
+
+@media (max-width: 368px) {
+  .App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Card-Container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 60vh;
+    overflow: scroll;
+  }
+
+  .Cards {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .texts {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0;
+    left: -15vw;
+  }
+
+  #search-text {
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  #No-Results {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: absolute;
+    top: 20vh;
   }
 }
 
 #Search-text {
-  width: 100%;
-  height: 100%;
   border: none;
-  background: none;
   color: white;
   font-size: 1.5rem;
   font-weight: 300;
   outline: none;
   position: absolute;
-  top: 20vh;
-  left: 0;
 }
 
 #No-Results {
@@ -87,15 +228,12 @@ body {
   font-size: 1.5rem;
   font-weight: 300;
   position: absolute;
-  top: 30vh;
-  left: 50vh;
-  transform: translate(50%, 0);
+  top: 10vh;
 }
 
 #phone-number {
   color: white;
   font-size: 1rem;
-
   transition: 0.3s ease-in-out;
 }
 
@@ -114,4 +252,17 @@ body {
   margin: 0 10vh 0 0;
   padding: 0;
   border-bottom: 1px solid white;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  height: auto;
+  width: 100%;
+  gap: 10px;
 }
